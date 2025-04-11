@@ -19,36 +19,63 @@
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;KOSANA&lt;/title&gt;</p>
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>body {</p>
 <p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Courier New', monospace;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>background-color: #000;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation: fadeIn 1.5s ease-in-out;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes fadeIn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>from { opacity: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>to { opacity: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>header {</p>
 <p class="p1"><span class="Apple-converted-space">      </span>padding: 2rem;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>font-size: 2.5rem;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 5px;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid #333;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation: slideDown 1s ease-in-out;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes slideDown {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>from { transform: translateY(-50px); opacity: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>to { transform: translateY(0); opacity: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>.intro {</p>
 <p class="p1"><span class="Apple-converted-space">      </span>max-width: 800px;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>margin: 3rem auto;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>padding: 0 2rem;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.8;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation: fadeInText 2s ease-in-out;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes fadeInText {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>from { opacity: 0; transform: translateY(20px); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>to { opacity: 1; transform: translateY(0); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>.tech-stack {</p>
 <p class="p1"><span class="Apple-converted-space">      </span>margin-top: 3rem;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid #333;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>padding-top: 2rem;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>.tech-stack h2 {</p>
 <p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.6rem;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>ul {</p>
 <p class="p1"><span class="Apple-converted-space">      </span>list-style: none;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
@@ -58,12 +85,20 @@
 <p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>li {</p>
 <p class="p1"><span class="Apple-converted-space">      </span>background-color: #111;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>padding: 0.5rem 1rem;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #444;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: transform 0.3s ease, background-color 0.3s ease;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>li:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transform: scale(1.05);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #222;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
 <p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>margin-top: 4rem;</p>
@@ -72,17 +107,38 @@
 <p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid #333;</p>
 <p class="p1"><span class="Apple-converted-space">      </span>color: #888;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 600px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>.intro {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 0 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>ul {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>li {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 80%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
 <p class="p1">&lt;/head&gt;</p>
 <p class="p1">&lt;body&gt;</p>
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;KOSANA&lt;/header&gt;</p>
 <p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="intro"&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Я — KOSANA. Меня невозможно вписать в формат. &lt;br /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Мой путь — это не стандартный курс или банальное резюме. Это осознанный выбор в сторону глубины. &lt;br /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Я не просто пишу код — я собираю систему из эмоций, логики и визуала. &lt;br /&gt;&lt;br /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Это — приглашение в другой стиль мышления. &lt;br /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Если ты читаешь это — значит, ты уже на правильной частоте.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Привет, меня зовут KOSANA. &lt;br /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Я не профи с кучей дипломов — я человек, который учится, пробует, собирает опыт сам. &lt;br /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Я люблю технологии, эстетику и смысл, и стараюсь объединить их в каждом проекте. &lt;br /&gt;&lt;br /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Этот сайт — не просто резюме, а часть моего пути. &lt;br /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Если ты это читаешь — возможно, наши пути пересекаются не просто так.</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
 <p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="tech-stack"&gt;</p>
