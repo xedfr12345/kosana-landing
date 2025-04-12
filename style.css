@@ -124,11 +124,11 @@
         width: 80%;
         text-align: center;
       }
+    }
 body.dark-theme {
   background-color: #000;
   color: #fff;
 }
-    }
 
 button {
   padding: 10px 20px;
