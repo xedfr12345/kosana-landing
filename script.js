@@ -11,4 +11,10 @@ const phrases = [
 button.addEventListener('click', () => {
     const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
     response.textContent = randomPhrase;
+    response.classList.add('active');
+
+    setTimeout(() => {
+        response.classList.remove('active');
+    }, 2000);
 });
+

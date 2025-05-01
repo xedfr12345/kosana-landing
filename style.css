@@ -176,4 +176,9 @@ body.dark-theme {
   margin-top: 15px;
   font-style: italic;
   color: #555;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#responseText.active {
+  opacity: 1;
 }
