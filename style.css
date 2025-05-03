@@ -1,33 +1,32 @@
 * {
   box-sizing: border-box;
 }
-
-.light-theme {
-  background-color: #fff;
-  color: #000;
-}
-
-.light-theme header,
-.light-theme footer {
-  border-color: #ccc;
-}
-
-.light-theme li {
-  background-color: #eee;
-  border-color: #bbb;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  animation: fadeIn 1.5s ease-in-out;
-  background-color: #121212;
-  color: #E0E0E0;
-  transition: all 0.5s ease;
-  text-align: center;
-  padding-top: 50px;
-}
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1.5s ease-in-out;
+    background-color: #0a0a0a;
+    background-image: linear-gradient(90deg, rgba(0, 255, 204, 0.03) 1px, transparent 1px),
+      linear-gradient(rgba(0, 255, 204, 0.03) 1px, transparent 1px);
+    animation: gridmove 60s linear infinite;
+    background-size: 40px 40px;
+    color: #E0E0E0;
+    transition: all 0.5s ease;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  @keyframes gridmove {
+    from {
+      background-position: 0 0;
+    }
+  
+    to {
+      background-position: 40px 40px;
+    }
+  
+  }
 
 @keyframes fadeIn {
   from {
@@ -117,7 +116,6 @@ ul {
 }
 
 li {
-  background-color: #111;
   padding: 0.5rem 1rem;
   border: 1px solid #444;
   border-radius: 4px;
@@ -157,11 +155,6 @@ footer {
     width: 80%;
     text-align: center;
   }
-}
-
-body.dark-theme {
-  background-color: #000;
-  color: #fff;
 }
 
 #callButton {
@@ -207,11 +200,19 @@ body.dark-theme {
   opacity: 1;
 }
 
-  @keyframes breathing {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
+@keyframes breathing {
+  0% {
+    opacity: 0;
   }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 
 .tg_link {
   text-decoration: none;
@@ -231,7 +232,8 @@ body.dark-theme {
   box-shadow: 0 0 5px rgba(0, 255, 150, 0.5);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s ease; box-shadow: 0.3s ease;
+  transition: transform 0.3s ease;
+  box-shadow: 0.3s ease;
 }
 
 .tg_link::before {
