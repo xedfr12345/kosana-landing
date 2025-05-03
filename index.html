@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,8 +8,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <title>KOSANA</title>
 </head>
+
 <body>
+  <div class="left-glow"></div>
+  <div class="right-glow"></div>
   <header>KOSANA</header>
+  <div style="text-align: center;">
+    <svg width="200" height="50">
+      <defs>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+          <feMerge>
+            <feMergeNode in="coloredBlur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+      <path d="M 0 50 Q 100 0 200 50" stroke="#00ffcc" stroke-width="2" fill="transparent" filter="url(#glow)" />
+    </svg>
+  </div>
   <section class="intro">
     <p>
       Привет, меня зовут KOSANA. <br />
@@ -44,11 +62,12 @@
     <script src="script.js"></script>
   </section>
 
-  <footer style="background-color: #111; color: #eee; text-align: center; padding: 20px; font-family: Arial, sans-serif;">
+  <footer class="footer">
     <p style="margin: 5px;">&copy; 2025 KOSANA</p>
     <p style="margin: 5px;">Создан вопреки невозможному</p>
-    <a href="https://github.com/xedfr12345/kosana-landing" style="color: #4caf50; text-decoration: none;">GitHub репозиторий</a>
+    <a href="https://github.com/xedfr12345/kosana-landing" style="color: #4caf50; text-decoration: none;">GitHub
+      репозиторий</a>
   </footer>
 </body>
-</html>
 
+</html>

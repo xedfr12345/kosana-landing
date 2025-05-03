@@ -1,32 +1,37 @@
 * {
   box-sizing: border-box;
 }
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    animation: fadeIn 1.5s ease-in-out;
-    background-color: #0a0a0a;
-    background-image: linear-gradient(90deg, rgba(0, 255, 204, 0.03) 1px, transparent 1px),
-      linear-gradient(rgba(0, 255, 204, 0.03) 1px, transparent 1px);
-    animation: gridmove 60s linear infinite;
-    background-size: 40px 40px;
-    color: #E0E0E0;
-    transition: all 0.5s ease;
-    text-align: center;
-    padding-top: 50px;
-  }
-  
-  @keyframes gridmove {
-    from {
-      background-position: 0 0;
-    }
-  
-    to {
-      background-position: 40px 40px;
-    }
-  
-  }
+
+body {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding-top: 50px;
+  transition: all 0.5s ease;
+}
+
+.left-glow,
+.right-glow {
+  position: fixed;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 255, 204, 0.4), transparent);
+  z-index: -1;
+}
+
+.right-glow {
+  right: 0;
+  left: auto;
+  background: linear-gradient(to left, rgba(0, 255, 204, 0.4), transparent);
+}
+
+.left-glow {
+  left: 0;
+}
 
 @keyframes fadeIn {
   from {
@@ -43,7 +48,6 @@ header {
   text-align: center;
   font-size: 2.5rem;
   letter-spacing: 5px;
-  border-bottom: 1px solid #333;
   animation: slideDown 1s ease-in-out;
 }
 
@@ -258,4 +262,23 @@ footer {
 .tg_link:hover::before {
   transform: scaleY(1);
   animation: breathing 2s infinite;
+}
+
+.footer {
+  background-color: transparent;
+  color: #eee;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border-top: none;
+}
+
+.footer::before {
+  content: "";
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(to right, #00ffff33, #00ffff99, #00ffff33);
+  margin-bottom: 20px;
 }
