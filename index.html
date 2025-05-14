@@ -59,15 +59,49 @@
     <br>
     <button id="callButton">Запустить систему ответа</button>
     <p id="responseText"></p>
-    <script src="script.js"></script>
-  </section>
 
-  <footer class="footer">
-    <p style="margin: 5px;">&copy; 2025 KOSANA</p>
-    <p style="margin: 5px;">Создан вопреки невозможному</p>
-    <a href="https://github.com/xedfr12345/kosana-landing" style="color: #4caf50; text-decoration: none;">GitHub
-      репозиторий</a>
-  </footer>
+    <section class="signal-form">
+      <h2>Отправить сигнал</h2>
+      <form id="signalForm">
+        <input type="text" id="title" placeholder="Заголовок сигнала" required />
+        <textarea id="content" placeholder="Содержание сигнала" required></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+      <p id="formResponse"></p>
+    </section>
+
+    <h1>VeronicaSignal Posts</h1>
+    <ul id="posts-list">
+      <li>Загрузка данных...</li>
+    </ul>
+    <script>
+      // Делаем запрос к твоему API (меняй адрес, если у тебя другой)
+      fetch('http://127.0.0.1:8000/api/veronicasignals/')
+        .then(response => response.json())
+        .then(data => {
+          const list = document.getElementById('posts-list');
+          list.innerHTML = ''; // очищаем "Загрузка данных..."
+          data.results.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `Title: ${item.title} | Content: ${item.content}`;
+            list.appendChild(li);
+          });
+        })
+        .catch(error => {
+          console.error('Ошибка при запросе:', error);
+          document.getElementById('posts-list').innerHTML = '<li>Ошибка загрузки данных.</li>';
+        });
+    </script>
+
+
+    <script src="script.js"></script>
+
+    <footer class="footer">
+      <p style="margin: 5px;">&copy; 2025 KOSANA</p>
+      <p style="margin: 5px;">Создан вопреки невозможному</p>
+      <a href="https://github.com/xedfr12345/kosana-landing" style="color: #4caf50; text-decoration: none;">GitHub
+        репозиторий</a>
+    </footer>
 </body>
 
 </html>

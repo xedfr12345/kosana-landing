@@ -282,3 +282,29 @@ footer {
   background: linear-gradient(to right, #00ffff33, #00ffff99, #00ffff33);
   margin-bottom: 20px;
 }
+
+.signal-form {
+  margin: 40px auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+.signal-form input,
+.signal-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.signal-form button {
+  padding: 10px 20px;
+  background: #00ffcc;
+  border: none;
+  cursor: pointer;
+}
+
+#formResponse {
+  margin-top: 15px;
+  font-style: italic;
+}
